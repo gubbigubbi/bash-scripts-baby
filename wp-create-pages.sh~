@@ -1,0 +1,9 @@
+#!/bin/bash
+IFS=" "
+echo "Please enter the page names to be created, seperated by a space"
+read pagenames
+arr=($pagenames)
+for i in "${!arr[@]}"; do
+echo animal $i: "${arr[$i]}"
+done
+unset IFS

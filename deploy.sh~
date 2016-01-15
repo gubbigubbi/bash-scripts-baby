@@ -1,0 +1,7 @@
+#!/bin/bash          
+echo "please enter the directory name"
+read DNAME
+echo "creating archive and compressing bra - excluding scss"
+tar -zcvf $DNAME-deploy.tar.gz $DNAME --exclude=*.scss --exclude "*sass"
+echo "all done!"
+
