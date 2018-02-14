@@ -5,11 +5,11 @@ read WIDTH
 fileWidth=$WIDTH
 fileWidthX=$fileWidth"x"
 #fileWidth=x
-echo $fileWidthX
+#echo $fileWidthX
 #echo "please enter the filetype"
 #read FILETYPE
 sudo mkdir "resized"
 echo "setting up directory"
 echo "resizing"
 #also look for .JPG extensions too!
-sudo mogrify -resize $fileWidthX -path resized *.jpg *.JPG
+sudo magick mogrify -format jpg -resize $fileWidthX -path resized *.jpeg *.jpg *.JPG *.tif *.png
